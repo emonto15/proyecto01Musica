@@ -1,6 +1,6 @@
 # NodeJS Proyecto01
 
-By: Edwin Montoya Jaramillo - emonto15@eafit.educo
+By: Edwin Montoya Jaramillo - emonto15@eafit.edu.co
 
 # Descripción de aplicación
 
@@ -37,19 +37,19 @@ Se generó la base, con Yeoman:
 
 	song:
 	{
-  	title: String,
-  	artist: String,
-  	album: String,
-  	genre: String,
-  	owner: Schema.Types.ObjectId,
-  	private: Boolean,
-  	sharedWith: [String]
+	  	title: String,
+	  	artist: String,
+	  	album: String,
+	  	genre: String,
+	  	owner: Schema.Types.ObjectId,
+	  	private: Boolean,
+	  	sharedWith: [String]
 	}
 
 	person: 
 	{
-  	username: String,
-	  password: String
+	 	username: String,
+		password: String
 	}
 
 ## 3.2 Servicios Web
@@ -61,13 +61,13 @@ Se generó la base, con Yeoman:
 	  URI: /newSong
 	  Body:
 	  {
-	  "title": val,
-	  "artist": val,
-  	"album": val,
-	  "genre": val,
-	  "private" : ["on"| ""],
-	  ["sharedWith": val[] ]
-	  }
+		"title": val,
+		"artist": val,
+		"album": val,
+		"genre": val,
+		"private" : ["on"| ""],
+		 ["sharedWith": val[] ]
+	 }
 	*/
 	/* Servicio Web: Listar todas las canciones publicas
 	  Método: GET
@@ -111,13 +111,13 @@ Se generó la base, con Yeoman:
 	  URI: /editSong
 	  Body:
 	  {
-	  "id": val,
-	  "title": val,
-	  "artist": val,
-	  "album": val,
-	  "genre": val,
-	  "private" : ["on"| ""],
-	  ["sharedWith": val[] ]
+		  "id": val,
+		  "title": val,
+		  "artist": val,
+		  "album": val,
+		  "genre": val,
+		  "private" : ["on"| ""],
+		  ["sharedWith": val[] ]
 	  }
 	*/
 	
@@ -127,7 +127,7 @@ Se generó la base, con Yeoman:
 	  URI: /deleteSong
 	  Body:
 	  {
-	  "id": "val"
+		  "id": "val"
 	  }
 	*/	
 ### Usuarios
@@ -137,8 +137,8 @@ Se generó la base, con Yeoman:
 	  URI: /signup
 	  Body: 
 	  {
-	  "username": "usuario",
-	  "password": "password"
+	  	"username": "usuario",
+	  	"password": "password"
 	  }
 	*/
 	/* Servicio Web: Ingresar a la plataforma con un usuario
@@ -147,8 +147,8 @@ Se generó la base, con Yeoman:
 	  URI: /login
 	  Body: 
 	  {
-	  "username": "usuario",
-	  "password": "password"
+	  	"username": "usuario",
+	  	"password": "password"
 	  }
 	*/
 	/* Servicio Web: Actualizar Usuario
@@ -157,9 +157,9 @@ Se generó la base, con Yeoman:
 	  URI: /updateProfile
 	  Body: 
 	  {
-	  "username": val,
-	  "password1": password.old,
-	  "password": password,
+	  	"username": val,
+	  	"password1": password.old,
+	  	"password": password,
 	  }
 	*/
 	
