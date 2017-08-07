@@ -129,9 +129,8 @@ Se generó la base, con Yeoman:
 	  {
 	  "id": "val"
 	  }
-	*/
-	
-	###Usuarios###
+	*/	
+### Usuarios
 	/* Servicio Web: Crear usuario
 	  Método: POST
 	  Autenticado: NO
@@ -275,7 +274,7 @@ y se verifica en la pagina https://proyecto01musica.herokuapp.com/
 ## 5.2 Proveedor de BDaaS mLab:
 
 Se crea una cuenta y se crea un ambiente privado (10.0.0.0/16) dentro de AWS, luego se despliega dentro de este ambiente priva con el nombre de la base de datos: proyecto01musica-production y un usuario restapi/restapi.
-Luego se ajusta la configuración en config.js
+Luego se ajusta la configuración en config.j:
 	.
 	.
 	production: {
