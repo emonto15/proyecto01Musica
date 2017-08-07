@@ -29,146 +29,146 @@ Aplicación web que permite gestionar Musica, un CRUD básico de metadatos MP3 (
 
 Se generó la base, con Yeoman:
 
-$ yo express
+	$ yo express
 
 # 3. Diseño:
 
 ## 3.1 Modelo de datos:
 
-song:
-{
-  title: String,
-  artist: String,
-  album: String,
-  genre: String,
-  owner: Schema.Types.ObjectId,
-  private: Boolean,
-  sharedWith: [String]
-}
+	song:
+	{
+  	title: String,
+  	artist: String,
+  	album: String,
+  	genre: String,
+  	owner: Schema.Types.ObjectId,
+  	private: Boolean,
+  	sharedWith: [String]
+	}
 
-person: 
-{
-  username: String,
-  password: String
-}
+	person: 
+	{
+  	username: String,
+	  password: String
+	}
 
 ## 3.2 Servicios Web
-###Canciones###
+### Canciones
 
-/* Servicio Web: Crear Canción
-  Método: POST
-  Autenticado: SI
-  URI: /newSong
-  Body:
-  {
-  "title": val,
-  "artist": val,
-  "album": val,
-  "genre": val,
-  "private" : ["on"| ""],
-  ["sharedWith": val[] ]
-  }
-*/
-/* Servicio Web: Listar todas las canciones publicas
-  Método: GET
-  Autenticado: NO
-  URI: /
-*/
-
-/* Servicio Web: Buscar cancion publica por titulo
-  Método: GET
-  Autenticado: NO
-  URI: /?term=val
-*/
-
-/* Servicio Web: Listar todas las canciones privadas
-  Método: GET
-  Autenticado: SI
-  URI: /home
-*/
-
-/* Servicio Web: Buscar canciones privadas por titulo
-  Método: GET
-  Autenticado: Si
-  URI: /home?term=val
-*/
-
-/* Servicio Web: Listar las canciones compartidas
-  Método: GET
-  Autenticado: SI
-  URI: /sharedWithMe
-*/
-
-/* Servicio Web: Buscar canciones compartidas por titulo
-  Método: GET
-  Autenticado: Si
-  URI: /sharedWithMe?term=val
-*/
-
-/* Servicio Web: Actualizar Canción
-  Método: POST
-  Autenticado: SI
-  URI: /editSong
-  Body:
-  {
-  "id": val,
-  "title": val,
-  "artist": val,
-  "album": val,
-  "genre": val,
-  "private" : ["on"| ""],
-  ["sharedWith": val[] ]
-  }
-*/
-
-/* Servicio Web: Borrar cancion por Id
-  Método: POST
-  Autenticado: SI
-  URI: /deleteSong
-  Body:
-  {
-  "id": "val"
-  }
-*/
-
-###Usuarios###
-/* Servicio Web: Crear usuario
-  Método: POST
-  Autenticado: NO
-  URI: /signup
-  Body: 
-  {
-  "username": "usuario",
-  "password": "password"
-  }
-*/
-/* Servicio Web: Ingresar a la plataforma con un usuario
-  Método: POST
-  Autenticado: NO
-  URI: /login
-  Body: 
-  {
-  "username": "usuario",
-  "password": "password"
-  }
-*/
-/* Servicio Web: Actualizar Usuario
-  Método: POST
-  Autenticado: SI
-  URI: /updateProfile
-  Body: 
-  {
-  "username": val,
-  "password1": password.old,
-  "password": password,
-  }
-*/
-
-/* Servicio Web: Borrar usuario
-  Método: GET
-  Autenticado: SI
-  URI: /deleteUser
-*/
+	/* Servicio Web: Crear Canción
+	  Método: POST
+	  Autenticado: SI
+	  URI: /newSong
+	  Body:
+	  {
+	  "title": val,
+	  "artist": val,
+  	"album": val,
+	  "genre": val,
+	  "private" : ["on"| ""],
+	  ["sharedWith": val[] ]
+	  }
+	*/
+	/* Servicio Web: Listar todas las canciones publicas
+	  Método: GET
+	  Autenticado: NO
+	  URI: /
+	*/
+	
+	/* Servicio Web: Buscar cancion publica por titulo
+	  Método: GET
+	  Autenticado: NO
+	  URI: /?term=val
+	*/
+	
+	/* Servicio Web: Listar todas las canciones privadas
+	  Método: GET
+	  Autenticado: SI
+	  URI: /home
+	*/
+	
+	/* Servicio Web: Buscar canciones privadas por titulo
+	  Método: GET
+	  Autenticado: Si
+	  URI: /home?term=val
+	*/
+	
+	/* Servicio Web: Listar las canciones compartidas
+	  Método: GET
+	  Autenticado: SI
+	  URI: /sharedWithMe
+	*/
+	
+	/* Servicio Web: Buscar canciones compartidas por titulo
+	  Método: GET
+	  Autenticado: Si
+	  URI: /sharedWithMe?term=val
+	*/
+	
+	/* Servicio Web: Actualizar Canción
+	  Método: POST
+	  Autenticado: SI
+	  URI: /editSong
+	  Body:
+	  {
+	  "id": val,
+	  "title": val,
+	  "artist": val,
+	  "album": val,
+	  "genre": val,
+	  "private" : ["on"| ""],
+	  ["sharedWith": val[] ]
+	  }
+	*/
+	
+	/* Servicio Web: Borrar cancion por Id
+	  Método: POST
+	  Autenticado: SI
+	  URI: /deleteSong
+	  Body:
+	  {
+	  "id": "val"
+	  }
+	*/
+	
+	###Usuarios###
+	/* Servicio Web: Crear usuario
+	  Método: POST
+	  Autenticado: NO
+	  URI: /signup
+	  Body: 
+	  {
+	  "username": "usuario",
+	  "password": "password"
+	  }
+	*/
+	/* Servicio Web: Ingresar a la plataforma con un usuario
+	  Método: POST
+	  Autenticado: NO
+	  URI: /login
+	  Body: 
+	  {
+	  "username": "usuario",
+	  "password": "password"
+	  }
+	*/
+	/* Servicio Web: Actualizar Usuario
+	  Método: POST
+	  Autenticado: SI
+	  URI: /updateProfile
+	  Body: 
+	  {
+	  "username": val,
+	  "password1": password.old,
+	  "password": password,
+	  }
+	*/
+	
+	/* Servicio Web: Borrar usuario
+	  Método: GET
+	  Autenticado: SI
+	  URI: /deleteUser
+	*/
 
 # 4. Despligue en un Servidor Centos 7.x en el DCA
 
@@ -260,29 +260,30 @@ Deshabilitar SELINUX
 Pasos para el despliegue luego de tener la cuenta:
 Se descarga el CLI de Heroku: https://devcenter.heroku.com/articles/heroku-command-line
 Luego en la terminal se ejecutan los siguentes pasos:
-    $ heroku login
-        >usernamae:emonto15@eafit.edu.co
-        >password *********
-    $ heroku git:clone -a proyecto01musica
-    $ cd proyecto01musica
-    $ git add .
-    $ git commit -am "make it better"
-    $ git push heroku master
+	
+	$ heroku login
+	>usernamae:emonto15@eafit.edu.co
+	>password *********
+	$ heroku git:clone -a proyecto01musica
+	$ cd proyecto01musica
+	$ git add .
+	$ git commit -am "make it better"
+	$ git push heroku master
+
 y se verifica en la pagina https://proyecto01musica.herokuapp.com/
 
 ## 5.2 Proveedor de BDaaS mLab:
 
 Se crea una cuenta y se crea un ambiente privado (10.0.0.0/16) dentro de AWS, luego se despliega dentro de este ambiente priva con el nombre de la base de datos: proyecto01musica-production y un usuario restapi/restapi.
 Luego se ajusta la configuración en config.js
-      .
-      .
-      production: {
-        root: rootPath,
-        app: {
-            name: 'proyecto01musica'
-            },
-        port: process.env.PORT || 3000,
-        db: 'mongodb://restapi:restapi@ds015962.mlab.com:15962/proyecto01musica-production'
-     }
-      .
-      .
+	.
+	.
+	production: {
+		root: rootPath,
+		app: {
+			name: 'proyecto01musica',
+			port: process.env.PORT || 3000,
+			db: 'mongodb://restapi:restapi@ds015962.mlab.com:15962/proyecto01musica-production'
+		}
+	.
+	.
