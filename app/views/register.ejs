@@ -1,0 +1,15 @@
+<% include header %>
+<h2>Register</h2>
+<form action="signup" method="post">
+  <div>
+    <label>Usuario: </label><input name="username">
+  </div>
+  <br/>
+  <div style="padding-bottom: 1%">
+    <label>contraseña: </label><input type="password" name="password">
+  </div>
+  <input type="submit">
+
+</form>
+<h2><%=message%></h2>
+<% include footer %>

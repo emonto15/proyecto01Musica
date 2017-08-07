@@ -1,0 +1,59 @@
+<%include header%>
+<div style="float: left; padding-right: 10%; padding-bottom: 3%">
+  <form action="home" style="display: inline; float: left">
+    <label>Buscar por Titulo:</label><input name="term" placeholder="buscar">
+    <input type="submit" value="buscar" hidden>
+  </form>
+</div>
+<div style=" float: right;padding-right: 10%; padding-bottom: 3%">
+  <form action="profile" style="display: inline">
+    <button>Mi Perfil</button>
+  </form>
+
+  <form action="./" style="display: inline">
+    <button>Pagina Princial</button>
+  </form>
+  <form action="sharedWithMe" style="display: inline">
+    <button>Compartidas conmigo</button>
+  </form>
+  <form action="logout" style="display: inline">
+    <button>salir!</button>
+  </form>
+</div>
+<h2 align="center" style="padding-bottom: 2%; padding-top: 2%; display: inline-block"><%=searchBy%></h2>
+<%if(songs.length>0){%>
+<table width="90%" >
+  <tr style="border: 2px solid black">
+    <th>Titulo</th>
+    <th>Artista</th>
+    <th>Album</th>
+    <th>Genero</th>
+    <th>Editar</th>
+  </tr>
+  <tbody align="center">
+  <%if(songs.length>0){%>
+  <%for(var song in songs){%>
+    <tr>
+      <td><%=songs[song].title%></td>
+      <td><%=songs[song].artist%></td>
+      <td><%=songs[song].album%></td>
+      <td><%=songs[song].genre%></td>
+        <td><a href="editSong?id=<%=songs[song]._id%>"><button>Editar</button></a></td>
+    </tr>
+  <%}
+  }%>
+  </tbody>
+</table>
+<%}else{%>
+<h2><%=message%></h2>
+<%}%>
+<br/>
+<div style="padding-right: 10%">
+  <form action="newSong">
+    <button style="float:right;">Nueva Cancion</button>
+  </form>
+</div>
+
+<%include footer%>
+
+

@@ -1,0 +1,54 @@
+<% include header %>
+<h2>Estas editando: <%=song.title%></h2>
+<form action="editSong" method="post">
+  <div>
+    <input type="hidden" name="id" value="<%=song.id%>">
+  </div>
+  <div>
+    <label>Titulo:</label>
+    <input type="text" name="title" value="<%=song.title%>">
+  </div>
+  <br/>
+  <div>
+    <label>Artista:</label>
+    <input type="text" name="artist" value="<%=song.artist%>">
+  </div>
+  <br/>
+  <div>
+    <label>Album:</label>
+    <input type="text" name="album" value="<%=song.album%>">
+  </div>
+  <br/>
+  <div>
+    <label>Genero:</label>
+    <input type="text" name="genre" value="<%=song.genre%>">
+  </div>
+  <br/>
+  <div>
+    <label>Deseas que esta cancion sea privada?</label>
+    <%if(checked){%>
+    <input type="checkbox" name="private" checked>
+    <%}else{%>
+    <input type="checkbox" name="private" >
+    <%}%>
+  </div>
+  <br/>
+  <div>
+    <label>En caso de ser privada y la quieres compartir solo con algunas personas escribe sus nombres de usuario separados por coma</label>
+    <input name="sharedWith" value="<%=song.sharedWith.toString().replace(new RegExp(/[|]|"/),"")%>">
+  </div>
+  <br/>
+  <div style="padding-right: 80%;">
+    <input type="submit" style="float: right;">
+  </div>
+</form>
+<form action="home" style="display: inline; padding-left: 0%">
+  <input type="submit" style="display: inline; padding-right: 0%" value="back">
+</form>
+<form method="post" action="deleteSong" style="display: inline; padding-left: 0%">
+    <input type="hidden" name="id" value="<%=song.id%>">
+    <input type="submit" style="padding-right: 100%" value="delete song">
+</form>
+<h2><%=message%></h2>
+
+<% include footer %>

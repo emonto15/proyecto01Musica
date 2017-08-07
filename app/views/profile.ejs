@@ -1,0 +1,23 @@
+<% include header %>
+<h2>Mi Perfil</h2>
+<form action="updateProfile" method="post" style="display: inline">
+  <div>
+    <label style="padding-right: 1%">Nombre de Usuario: </label><input readonly name="username" value="<%=username%>">
+  </div>
+  <br/>
+  <div style="padding-bottom: 1%">
+    <label style="padding-right: 5%">Clave Actual: </label><input type="password" name="password1">
+  </div>
+  <div style="padding-bottom: 1%">
+    <label style="padding-right: 5%">Nueva Clave: </label><input type="password" name="password">
+  </div>
+  <input type="submit" value="Actualizar">
+</form>
+<form action="./" style="display: inline; padding-left: 1%">
+  <input type="submit" value="Volver">
+</form>
+<form action="deleteUser" style="display: inline; padding-left: 90%">
+  <input type="submit" value="Borrar Cuenta!!">
+</form>
+<h2><%=message%></h2>
+<% include footer %>

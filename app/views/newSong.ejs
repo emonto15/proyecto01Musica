@@ -1,0 +1,39 @@
+<% include header %>
+<h2>Crea una nueva canción!!</h2>
+<form action="newSong" method="post" style="display: inline">
+  <div>
+    <label>Titulo:</label>
+    <input name="title">
+  </div>
+  <br/>
+  <div>
+    <label>Artista:</label>
+    <input name="artist">
+  </div>
+  <br/>
+  <div>
+    <label>Album:</label>
+    <input name="album">
+  </div>
+  <br/>
+  <div>
+    <label>Genero:</label>
+    <input name="genre">
+  </div>
+  <br/>
+  <div>
+    <label>Deseas que esta cancion sea privada?</label>
+    <input type="checkbox" name="private">
+  </div>
+  <br/>
+  <div>
+    <label>En caso de ser privada y la quieres compartir solo con algunas personas escribe sus nombres de usuario separados por coma</label>
+    <input name="sharedWith">
+  </div>
+  <br/>
+  <input type="submit">
+</form>
+<form action="home" style="display: inline; padding-left: 2%">
+  <input type="submit" style="display: inline; padding-right: 0%" value="back">
+</form>
+<% include footer %>
