@@ -253,9 +253,9 @@ Deshabilitar SELINUX
       .
 
 
-# 5. Despliege Produccion:##
+# 5. Despliege Produccion:
 
-# 5.1 Proveedor de PaaS: Heroku:#
+## 5.1 Proveedor de PaaS: Heroku:
 
 Pasos para el despliegue luego de tener la cuenta:
 Se descarga el CLI de Heroku: https://devcenter.heroku.com/articles/heroku-command-line
@@ -270,7 +270,7 @@ Luego en la terminal se ejecutan los siguentes pasos:
     $ git push heroku master
 y se verifica en la pagina https://proyecto01musica.herokuapp.com/
 
-## 5.2 Proveedor de BDaaS mLab:##
+## 5.2 Proveedor de BDaaS mLab:
 
 Se crea una cuenta y se crea un ambiente privado (10.0.0.0/16) dentro de AWS, luego se despliega dentro de este ambiente priva con el nombre de la base de datos: proyecto01musica-production y un usuario restapi/restapi.
 Luego se ajusta la configuración en config.js
